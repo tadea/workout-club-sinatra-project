@@ -6,14 +6,14 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "secret"
+    set :session_secret, "secret_workout_club"
   end
 
   get "/" do
     erb :welcome
   end
 
-  he def logged_in?
+   def logged_in?
       # true if user is logged in, otherwise false
       !!current_user
     end
