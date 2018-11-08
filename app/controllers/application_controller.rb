@@ -9,13 +9,12 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret_workout_club"
   end
 
-  get "/" do
-    erb :welcome
-  end
+    get "/" do
+     erb :welcome
+   end
 
    def logged_in?
-      # true if user is logged in, otherwise false
-      !!current_user
+      !!current_user   # true if user is logged in, otherwise false
     end
 
     def current_user
