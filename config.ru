@@ -10,3 +10,4 @@ use Rack::MethodOverride #in order to send PATCH and DELTE request
 
 use UsersController
 run ApplicationController
+run WorkoutsController

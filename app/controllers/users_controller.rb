@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       puts session
       redirect "users/#{@user.id}"   
     else
-     
+     erb :signup #check this!
     end
   end
 
