@@ -7,14 +7,25 @@ class WorkoutsController < ApplicationController
 	post '/workouts' do
 		if !logged_in?
 			redirect '/'
-		if params[:content] != ""
-			user = User.find_by_id(session[:user_id])
+		end
+
+		if params[:description] != "" && params[:name] != ""
+			
 			@workout = Workout.create(params)
+			session[:user_id] = @workout.id 
 			redirect "/workouts/#{@workout.id}"
 		else
 			redirect '/workouts/new'
 		 end
 	  end
+    
+
+    get '/workouts/:id' do
+    	@workout = Workout.find_by_id(params[:id])
+    	erb :'workouts/show'
+    	
     end
 
+
 end
+
