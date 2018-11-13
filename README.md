@@ -1,13 +1,13 @@
-##Workout Club
+## Workout Club
 
-##A Sinatra Potrfolio Project for Flatiron School##
+## A Sinatra Potrfolio Project for Flatiron School##
 
-##Usage
+## Usage
  	
  	This is a Sinatra CRUD application that allows the user to keep track of theor workouts logs and be able to see other users logs too.
 
 
-##Installation Instructions
+## Installation Instructions
    	
    	Fork/Clone this repo, and then navigate to the repo directory in your terminal.
 
@@ -17,7 +17,7 @@
 
 	Finally, start up a server using shotgun and navigate to the provided url.
 
-##Contributing
+## Contributing
 
 	Bug reports and pull requests are welcome on GitHub at https://github.com/tadea/workout-club-sinatra-project.git
 	This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
