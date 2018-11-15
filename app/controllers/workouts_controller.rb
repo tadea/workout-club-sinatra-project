@@ -34,8 +34,9 @@ class WorkoutsController < ApplicationController
 
 
     get '/workouts/:id/edit' do
-    erb :'/workouts/edit'
-  end
+    	@workout = Workout.find_by_id(params[:id])
+      erb :'/workouts/edit'
+    end
 
 
 

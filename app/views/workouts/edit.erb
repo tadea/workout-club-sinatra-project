@@ -1,1 +1,12 @@
-edit.erb
+<h2>Edit Workout</h2>
+
+
+<form action="/workouts/<%= @workout.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+ <label>Name:</label>
+ 	<p><input type="text" name="name" value="<%= @workout.name %>"></p>
+ 	<label>Description: </label>
+    <p><input type="text" name="description" value="<%= @workout.description %>"></p>
+    <input type="submit" value="Update Workout">
+ 	
+ </form>
