@@ -1,5 +1,12 @@
 class WorkoutsController < ApplicationController
 
+	get '/workouts' do
+		@workout = Workout.all
+		erb :'/users/show'
+    end
+
+
+
 	get '/workouts/new' do 
 		erb :'/workouts/new'		
 	end
