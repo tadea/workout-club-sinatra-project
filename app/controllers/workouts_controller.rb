@@ -38,6 +38,12 @@ class WorkoutsController < ApplicationController
       erb :'/workouts/edit'
     end
 
+    patch '/workouts/:id' do
+    	@workout = Workout.find_by_id(params[:id])
+    	@workout.update(description: params[:description], name: params[:name])
+    	@workout.save
+    	redirect "/workouts/#{@workout.id}"
+    end
 
 
 end
