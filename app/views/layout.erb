@@ -15,9 +15,12 @@
   </head>
   <body>
     <div class="nav_bar">
-      <a href="/workouts/new">Create new workout</a>
+        <% if logged_in? %>
       <a href="/logout">Logout</a>
-      <a href="/workouts">Workouts</a> 
+      <a href="/workouts/new">Create new workout</a>
+      <a href="/workouts/index">Workouts</a> 
+      <% end %>
+    
     </div>
     <div class="wrapper">
 
