@@ -2,5 +2,9 @@
 <p><%= @workout.name %> <%= @workout.description %></p>
 
 
+<% if current_user == @workout.user %>
 
-<a href="/workouts/<%= @workout.id %>/edit">Edit Workout</a>
+      <a href="/workouts/<%= @workout.id %>/edit">Edit Workout</a>
+      <a href="/workouts/<%= @workout.id %>/delete">Delete Workout</a>
+ <% end %>
+ 
