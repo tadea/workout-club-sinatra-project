@@ -17,6 +17,8 @@ class ApplicationController < Sinatra::Base
    end
  end
 
+ helpers do 
+
    def logged_in?
       !!current_user   # true if user is logged in, otherwise false
     end
@@ -24,6 +26,8 @@ class ApplicationController < Sinatra::Base
     def current_user
       @current_user ||= User.find_by(id: session[:user_id])
     end
+
+  end
 
 
 end
