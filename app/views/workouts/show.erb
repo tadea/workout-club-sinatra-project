@@ -5,6 +5,10 @@
 <% if current_user == @workout.user %>
 
       <a href="/workouts/<%= @workout.id %>/edit">Edit Workout</a>
-      <a href="/workouts/<%= @workout.id %>/delete">Delete Workout</a>
+      <br></br>
+      <form action="/workouts/<%= @workout.id %>" method="post">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" name="" value="Delete this Workout">
+    </form>
  <% end %>
  
