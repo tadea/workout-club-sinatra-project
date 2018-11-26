@@ -20,7 +20,6 @@
 		if params[:description] != "" && params[:name] != ""
 			
 			@workout = Workout.create(description: params[:description], name: params[:name], user_id: current_user.id)
-			#session[:user_id] = @workout.id 
 			redirect "/workouts/#{@workout.id}"
 		else
 			redirect '/workouts/new'
@@ -56,7 +55,7 @@
       #binding.pry
          @workout = Workout.find(params[:id])
          if logged_in?
-          if @workout.user == current_user
+          if @workout.user == current_user && params[:description] && params[:name] != ""
                @workout.update(description: params[:description], name: params[:name])
                 redirect "/workouts/#{@workout.id}"
             else
@@ -67,9 +66,17 @@
      end
  end
 
-      #get '/workouts/:id/delete' do 
-       # @workout = Workout.find(params[:id])
-        
+    
+    delete '/workouts/:id' do 
+       @workout = Workout.find(params[:id])
+       if @workout.user == current_user
+          @workout.destroy
+          redirect '/workouts' 
+       else
+          redirect '/workouts'
+
+     end
+   end
       #end
 
 end
