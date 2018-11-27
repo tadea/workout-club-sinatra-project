@@ -20,7 +20,8 @@
 		if params[:description] != "" && params[:name] != ""
 			
 			@workout = Workout.create(description: params[:description], name: params[:name], user_id: current_user.id)
-			redirect "/workouts/#{@workout.id}"
+			#flash[:message] = "Successfully created workout."
+      redirect "/workouts/#{@workout.id}"
 		else
 			redirect '/workouts/new'
 		 end
@@ -77,6 +78,6 @@
 
      end
    end
-      #end
+      
 
 end

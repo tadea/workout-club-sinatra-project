@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bmabey/database_cleaner.git
-  revision: 6ff4843e49ddc41a3a8b14fa1391a2cedb675b3c
+  revision: 4c2408ffdbbd990e78d6590f4ef6ba5e58aca673
   specs:
     database_cleaner (1.7.0)
 
@@ -90,6 +90,8 @@ GEM
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sqlite3 (1.3.13)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -123,6 +125,7 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-activerecord
+  sinatra-flash
   sqlite3
   thin
   tux
