@@ -72,7 +72,7 @@
        @workout = Workout.find(params[:id])
        if @workout.user == current_user
           @workout.destroy
-          redirect '/workouts' 
+          redirect "users/#{current_user.id}" 
        else
           redirect '/workouts'
 
