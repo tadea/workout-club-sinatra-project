@@ -7,14 +7,14 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (4.2.10)
-      activesupport (= 4.2.10)
+    activemodel (4.2.11)
+      activesupport (= 4.2.11)
       builder (~> 3.1)
-    activerecord (4.2.10)
-      activemodel (= 4.2.10)
-      activesupport (= 4.2.10)
+    activerecord (4.2.11)
+      activemodel (= 4.2.11)
+      activesupport (= 4.2.11)
       arel (~> 6.0)
-    activesupport (4.2.10)
+    activesupport (4.2.11)
       i18n (~> 0.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
@@ -25,7 +25,7 @@ GEM
     bcrypt (3.1.12)
     bond (0.5.1)
     builder (3.2.3)
-    capybara (3.11.1)
+    capybara (3.12.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -52,8 +52,6 @@ GEM
       method_source (~> 0.9.0)
     public_suffix (3.0.3)
     rack (2.0.6)
-    rack-flash3 (1.0.5)
-      rack
     rack-protection (2.0.4)
       rack
     rack-test (1.1.0)
@@ -92,13 +90,15 @@ GEM
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sqlite3 (1.3.13)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
     thread_safe (0.3.6)
-    tilt (2.0.8)
+    tilt (2.0.9)
     tux (0.3.0)
       ripl (>= 0.3.5)
       ripl-multi_line (>= 0.2.4)
@@ -118,7 +118,6 @@ DEPENDENCIES
   capybara
   database_cleaner!
   pry
-  rack-flash3
   rack-test
   rake
   require_all
@@ -126,6 +125,7 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-activerecord
+  sinatra-flash
   sqlite3
   thin
   tux

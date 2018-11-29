@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   
       puts session
       redirect "users/#{@user.id}"   
-    else
+    else  
+      flash[:message] = "The email and password you entered did not match our records. Please try again."
      redirect '/login'
     end
   end

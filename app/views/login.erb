@@ -1,4 +1,8 @@
  <h3>Log in:</h3>
+ <% if flash[:message] %>
+ <h4><%= flash[:message] %></h4>
+ <% end %>
+ <br><br>
  <form class="" action="/login" method="post">
  	<label for="email">Email: </label>
  	<input type="text" name="email" value="">

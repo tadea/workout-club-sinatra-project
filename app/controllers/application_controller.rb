@@ -9,8 +9,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret, "secret_workout_club"
- 
-    register Sinatra::ActiveRecordExtension
+    register Sinatra::Flash
+
 
   end
 
