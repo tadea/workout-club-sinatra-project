@@ -46,6 +46,7 @@
            end
         else
            redirect '/'
+        
         end
     end
  
