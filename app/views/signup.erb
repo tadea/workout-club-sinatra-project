@@ -1,4 +1,8 @@
 <h3>Sign up below:</h3>
+<% if flash[:message] %>
+ <h4><%= flash[:message] %></h4>
+ <% end %>
+ <br><br>
  <form class="" action="/users" method="post">
  	<label>Name:</label>
  	<p><input type="text" name="name" placeholder="Name"></p>
