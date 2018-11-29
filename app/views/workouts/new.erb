@@ -1,4 +1,8 @@
 <h2>New Workout</h2>
+<% if flash[:message] %>
+ <h4><%= flash[:message] %></h4>
+ <% end %>
+ <br><br>
 
 <form class="" action="/workouts" method="post">
 	<label>Name:</label>

@@ -1,6 +1,10 @@
 
 
 <h2>Workouts</h2>
+<% if flash[:message] %>
+ <h4><%= flash[:message] %></h4>
+ <% end %>
+ <br><br>
 <p><%= @workout.name %> <%= @workout.description %></p>
 
 
