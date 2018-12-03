@@ -1,4 +1,4 @@
-<h2 align="center">ALL WORKOUTS</h2>
+<h2 align="center">All Workouts</h2>
 <% @workouts.each do |workout| %>
 	<h3><a href="/workouts/<%= workout.id %>"><%= workout.name %></a></h3>
 	<p><h5><%= workout.created_at %></h5></p>
