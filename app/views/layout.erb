@@ -11,19 +11,19 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   </head>
   <body>
     <div class="nav_bar">
         <% if logged_in? %>
-      <a href="/logout">Logout</a>
-      <a href="/workouts/new">Create new workout</a>
-      <a href="/workouts">Workouts</a> 
-      <a href="/users/show">Home</a>
-      <% end %>
-    
-    </div>
-
+        <ul>
+      <li><a href="/logout">Logout</a></li>
+      <li><a href="/workouts/new">Create new workout</a></li>
+      <li><a href="/workouts">Workouts</a> </li>
+      <li><a href="/users/show">Home</a></li>
+      <% end %>  
+    </ul>
+</div>
 
     <div class="wrapper">
       <% if flash[:message] %>

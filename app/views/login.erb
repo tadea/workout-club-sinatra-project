@@ -1,17 +1,16 @@
- <h3>Log in:</h3>
  <% if flash[:message] %>
  <h4><%= flash[:message] %></h4>
  <% end %>
- <br><br>
- <form class="" action="/login" method="post">
+  <h3 align="center">Log in:</h3>
+ <br>
+ <form class="" action="/login" method="post" align="center">
  	<label for="email">Email: </label>
- 	<input type="text" name="email" value="">
+ 	<p><input type="text" name="email" value=""></p>
  	<label for="password">Password: </label>
-    <input type="password" name="password" value="">
-    <input type="submit" value="LogIn">
- 	 
-
-     
-     <a href="/">Go Back</a>
+    <p><input type="password" name="password" value=""></p>
+    <p><input type="submit" value="LogIn"></p>
+ 	 <br>
+ 	 <br>
+     <a href="/" style="float: left;">Go Back</a>
  </form>
 

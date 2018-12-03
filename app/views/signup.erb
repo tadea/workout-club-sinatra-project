@@ -1,9 +1,8 @@
-<h3>Sign up below:</h3>
 <% if flash[:message] %>
  <h4><%= flash[:message] %></h4>
  <% end %>
- <br><br>
- <form class="" action="/users" method="post">
+ <h3 align="center">Sign up below:</h3>
+ <form class="" action="/users" method="post" align="center">
  	<label>Name:</label>
  	<p><input type="text" name="name" placeholder="Name"></p>
  	<label>Email:</label>
@@ -11,7 +10,7 @@
  	<label>Password: </label>
     <p><input type="password" name="password" placeholder="Password"></p>
     <input type="submit" value="Sign Up">
-
-     <a href="/">Go Back</a>
+<br><br>
+     <a href="/" style="float: left;">Go Back</a>
  	
  </form>
