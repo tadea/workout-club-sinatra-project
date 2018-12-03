@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       puts session
       redirect "users/#{@user.id}"   
     else  
-      flash[:message] = "The email and password you entered did not match our records. Please try again."
+      flash[:error] = "The email and password you entered did not match our records. Please try again."
      redirect '/login'
     end
   end
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id 
       redirect "/users/#{@user.id}"
     else
-      flash[:message] = "All fields are required"
+      flash[:error] = "All fields are required"
       redirect '/signup'
     end
   end

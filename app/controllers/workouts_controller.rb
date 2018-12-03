@@ -23,7 +23,7 @@
 			@workout = Workout.create(description: params[:description], name: params[:name], user_id: current_user.id)
       redirect "/workouts/#{@workout.id}"
 		else
-      flash[:message] = "All fields are required"
+      flash[:error] = "All fields are required"
 			redirect '/workouts/new'
 		 end
 	  end

@@ -27,7 +27,10 @@
 
     <div class="wrapper">
       <% if flash[:message] %>
-        <h4><%= flash[:message] %></h4>
+        <h4 style="color: blue; font-size: 23px;"><%= flash[:message] %></h4>
+      <% end %>
+      <% if flash[:error] %>
+        <h4 style="color: red; font-size: 23px;"><%= flash[:error] %></h4>
       <% end %>
      
 
