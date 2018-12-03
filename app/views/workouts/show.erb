@@ -2,12 +2,14 @@
 
 <h2>Workouts</h2>
 
-<p><%= @workout.name %> <%= @workout.description %></p>
+<p><%= @workout.name %></p>
+<p><%= @workout.description %></p>
+
 
 
 <% if current_user == @workout.user %>
 
-      <a href="/workouts/<%= @workout.id %>/edit">Edit Workout</a>
+      <a href="/workouts/<%= @workout.id %>/edit"><input type="submit" class="button" value="Edit Workout"></a>
       <br></br>
       <form action="/workouts/<%= @workout.id %>" method="post">
         <input id="hidden" type="hidden" name="_method" value="DELETE">

@@ -14,15 +14,15 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   </head>
   <body>
-    <div class="nav_bar">
+    <h2><div class="nav_bar"></h2>
         <% if logged_in? %>
-        <ul>
-      <li><a href="/logout">Logout</a></li>
-      <li><a href="/workouts/new">Create new workout</a></li>
-      <li><a href="/workouts">Workouts</a> </li>
-      <li><a href="/users/show">Home</a></li>
+     
+          <a href="/logout"><input type="submit" class="button" value="Logout"></a>
+          <a href="/workouts/new"><input type="submit" class="button" value="Create New Workout"></a>
+          <a href="/workouts"><input type="submit" class="button" value="All Workouts"></a> 
+          <a href="/users/show"><input type="submit" class="button" value="Home"></a>
       <% end %>  
-    </ul>
+  
 </div>
 
     <div class="wrapper">
