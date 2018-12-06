@@ -19,7 +19,7 @@
 
 		if params[:description] != "" && params[:name] != ""
       flash[:message] = "Successfully created workout"
-			
+	
 			@workout = Workout.create(description: params[:description], name: params[:name], user_id: current_user.id)
       redirect "/workouts/#{@workout.id}"
 		else
@@ -59,7 +59,7 @@
          @workout = Workout.find(params[:id])
          if logged_in?
           if @workout.user == current_user && params[:description] && params[:name] != ""
-            flash[:message] = "Workout Successfully edited."
+            flash[:message] = "Workout successfully updated!"
                @workout.update(description: params[:description], name: params[:name])
                 redirect "/workouts/#{@workout.id}"
             else
@@ -74,7 +74,7 @@
     delete '/workouts/:id' do 
        @workout = Workout.find(params[:id])
        if @workout.user == current_user
-        flash[:message] = "Workout Successfully Deleted."
+        flash[:message] = "Workout successfully deleted."
           @workout.destroy
           redirect "users/#{current_user.id}" 
        else
