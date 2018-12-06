@@ -4,10 +4,7 @@
 
 <p>Name: <%= @workout.name %></p>
 <p>Description: <%= @workout.description %></p>
-
 	
-
-
 
 <% if current_user == @workout.user %>
 
@@ -15,7 +12,7 @@
       <br></br>
       <form action="/workouts/<%= @workout.id %>" method="post">
         <input id="hidden" type="hidden" name="_method" value="DELETE">
-        <input type="submit" name="" value="Delete this Workout">
+        <input type="submit" name="" value="Delete Workout">
     </form>
  <% end %>
  
