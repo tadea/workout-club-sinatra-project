@@ -32,7 +32,7 @@
   h1 {
     font-size: 36px;
     line-height: 54px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Times", cursive, sans-serif;
   }
 
   h2 {
@@ -47,6 +47,8 @@
     line-height: 49px;
     font-color: #1d579e;
   }
+
+  
 
   p {
     margin-bottom: 18px;
