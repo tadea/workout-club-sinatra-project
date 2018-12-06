@@ -1,7 +1,10 @@
 <h2 align="center">All Workouts</h2>
+
 <% @workouts.each do |workout| %>
+
 	<h4><a href="/workouts/<%= workout.id %>"><%= workout.name %></a></h4>
 	<p><h5>Date:<%= workout.created_at.strftime("%m/%d/%y") %></h5></p>
-	<p>Created by: </p>	
+	<p>Created by: <%= workout.user.name %></p>
+
    _______________________________________________________________________<br>
 <% end %>
