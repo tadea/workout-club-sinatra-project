@@ -4,7 +4,7 @@
 
 ## Usage
  	
- This is a Sinatra CRUD application that allows the user to keep track of theor workouts logs and be able to see other users logs too.
+ This is a Sinatra CRUD application that allows the user to keep track of their workouts logs and be able to see other users logs too.
 
 
 ## Installation Instructions
