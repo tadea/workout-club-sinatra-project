@@ -23,16 +23,25 @@ class UsersController < ApplicationController
   end
 
   post '/users' do
-    if params[:name] != "" && params[:email] != "" && params[:password] != "" 
-      #binding.pry
-      @user = User.create(params)
-      session[:user_id] = @user.id 
-      redirect "/users/#{@user.id}"
+ 
+    if User.find_by(email: params[:email]) 
+          flash[:error] = "This email already exist!"
+           redirect '/signup'
     else
-      flash[:error] = "All fields are required"
-      redirect '/signup'
+      if 
+        params[:name] != "" && params[:email] != "" && params[:password] != "" 
+      
+          @user = User.create(params)
+           session[:user_id] = @user.id 
+              redirect "/users/#{@user.id}"
+      else
+        flash[:error] = "All fields are required!"
+        redirect '/signup'  
+      end
     end
   end
+
+
 
    
   get '/users/:id' do
