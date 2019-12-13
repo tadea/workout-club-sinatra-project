@@ -1,15 +1,12 @@
 ## Workout Club
 
-## A Sinatra Potrfolio Project for Flatiron School
 
 ## Usage
- 	
- This is a Sinatra CRUD application that allows the user to keep track of their workouts logs and be able to see other users logs too.
-
+WorkoutClub is a Sinatra CRUD Web Application that gives a user the option to log their workouts and be able to share them along with the rest of the users.
 
 ## Installation Instructions
    	
- Fork/Clone this repo, and then navigate to the repo directory in your terminal.
+Fork/Clone this repo, and then navigate to the repo directory in your terminal.
 
 Then, run bundle install to install all gem dependencies.
 
