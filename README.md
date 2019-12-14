@@ -8,11 +8,11 @@ WorkoutClub is a Sinatra CRUD Web Application that gives a user the option to lo
    	
 Fork/Clone this repo, and then navigate to the repo directory in your terminal.
 
-Then, run bundle install to install all gem dependencies.
+Then, run `bundle install` to install all gem dependencies.
 
-Run all rake migrations with rake db:migrate
+Run all rake migrations with `rake db:migrate`
 
-Finally, start up a server using shotgun and navigate to the provided url.
+Finally, start up a server using `shotgun` and navigate to the provided url.
 
 ## Contributing
 
