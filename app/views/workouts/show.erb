@@ -1,18 +1,13 @@
-
-
 <h2 align="center">Workouts</h2>
-
 <p>Name: <%= @workout.name %></p>
 <p>Description: <%= @workout.description %></p>
-	
 
 <% if current_user == @workout.user %>
-
-      <a href="/workouts/<%= @workout.id %>/edit"><input type="submit" class="button" value="Edit Workout"></a>
-      <br></br>
-      <form action="/workouts/<%= @workout.id %>" method="post">
-        <input id="hidden" type="hidden" name="_method" value="DELETE">
-        <input type="submit" name="" value="Delete Workout">
-    </form>
+      <a href="/workouts/<%= @workout.id %>/edit"><input type="submit" class="button" value="Edit"></a>
+      <br>
+        <form action="/workouts/<%= @workout.id %>" method="post">
+            <input id="hidden" type="hidden" name="_method" value="DELETE">
+            <input type="submit" class="button" name="" value="Delete">
+        </form>
  <% end %>
  
