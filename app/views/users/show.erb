@@ -1,8 +1,8 @@
-<h2 align="center"><%= current_user.name %>'s Workout Tracker</h2>
+<h2 align="center"><i class="fas fa-user"></i><%= current_user.name %>'s Workout Tracker</h2> 
      <% current_user.workouts.each do |workout| %>
     <ul class="box-container">
       <li>
-      	<h4><a href="/workouts/<%=workout.id%>"><%= workout.name %></a></h4>
+      	<h4><i class="fas fa-dumbbell"></i><a href="/workouts/<%=workout.id%>"><%= workout.name %></a></h4>
       </li>
     </ul>
    <% end %>
