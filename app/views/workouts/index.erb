@@ -4,7 +4,7 @@
 
 	<h4><i class="fas fa-dumbbell"></i><a href="/workouts/<%= workout.id %>"><%= workout.name %></a></h4>
 	<h5><i class="far fa-calendar-alt"></i><%= workout.created_at.strftime("%m/%d/%y") %></h5>
-	<p>Created by: <%= workout.user.name %></p>
+	<p><i class="far fa-user"></i> <%= workout.user.name %></p>
 
    _______________________________________________________________________<br>
 <% end %>
